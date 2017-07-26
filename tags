@@ -1,0 +1,156 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ClientConnectToDropBox	lib/Client/ClientConnectToDropBox.c	/^void ClientConnectToDropBox(int dropBoxId, int machineId,int connid, char *rootDirectory){$/;"	f
+DATA	include/Server/ServerCommon.h	/^	} DATA;$/;"	t	typeref:struct:data
+DROPBOX	include/Server/ServerCommon.h	/^	} DROPBOX;$/;"	t	typeref:struct:dropBox
+FILEINFO	include/Server/ServerCommon.h	/^	} FILEINFO;$/;"	t	typeref:struct:perFileStruct
+ForEachFileNewUserAtEmpty	lib/Server/OperationOnEachFile.c	/^void ForEachFileNewUserAtEmpty(void *trieData, void *myData){$/;"	f
+ForEachFileNewUserNonEmpty	lib/Server/OperationOnEachFile.c	/^void ForEachFileNewUserNonEmpty(void *trieData, void *myData){$/;"	f
+HEADER	include/Common/CommandHeader.h	/^} HEADER;$/;"	t	typeref:struct:header
+HandleEvent	lib/Client/HandleGeneratedEvent.c	/^  int HandleEvent(int fdNotify,int connid, char *rootDirectory, int dropBoxId, int machineId){$/;"	f
+HandleNewUser	lib/Server/ServerHandleNewUser.c	/^int HandleNewUser(int connid){$/;"	f
+INIT_ALLOC	include/Common/ContAllocat.h	12;"	d
+MAX_FOLDER_ON_SYSTEM	include/Client/RegisterNotifier.h	13;"	d
+MAX_FOLDER_ON_SYSTEM	lib/Client/RegisterNotifier.c	20;"	d	file:
+OperationOnEachFile	lib/Server/OperationOnEachFile.c	/^void OperationOnEachFile(void *trieData, void *myData){$/;"	f
+TO_WATCH	include/Client/RegisterNotifier.h	14;"	d
+TO_WATCH	lib/Client/RegisterNotifier.c	21;"	d	file:
+TRIE	include/Common/TRIE.h	/^	} TRIE;$/;"	t	typeref:struct:trie
+TRIENODE	include/Common/TRIE.h	/^		} TRIENODE;$/;"	t	typeref:struct:trienode
+__COMMAND_HEADER__	include/Common/CommandHeader.h	2;"	d
+__CONNECTION__	include/Common/Connection.h	2;"	d
+__CONT_ALLOCATE__	include/Common/ContAllocat.h	11;"	d
+__FILE_TRANSFER__	include/Common/FileTransfer.h	15;"	d
+__HANDLE_FILE_CHANGE__	include/Client/HandleFileChange.h	17;"	d
+__HANDLE_NOTIFY__	include/Client/HandleNotifyEvent.h	14;"	d
+__OPERATION_EACH__	include/Server/OperationOnEachFile.h	2;"	d
+__REGISTER_NOTIFIER__	include/Client/RegisterNotifier.h	10;"	d
+__SERVER_COMMON__	include/Server/ServerCommon.h	7;"	d
+__SERVER_FILE_CHANGE__	include/Server/ServerHandleFileChange.h	20;"	d
+__TRIE__	include/Common/TRIE.h	11;"	d
+addWatchOnDirectory	lib/Client/RegisterNotifier.c	/^int addWatchOnDirectory(int fdNotify, char *name, char *rootDirectory){$/;"	f
+add_notifier	lib/Client/RegisterNotifier.c	/^int add_notifier(char *directName){$/;"	f
+add_subdir_watch	lib/Client/RegisterNotifier.c	/^ int add_subdir_watch(int fdNotify, char *dirName, char *rootDirectory){$/;"	f
+applyOperationOnAll	lib/Common/TRIE.c	/^void applyOperationOnAll(TRIE *trie, void (*func)(void *data,void *userData), void *udata){$/;"	f
+array	include/Common/TRIE.h	/^		struct trienode *array;	\/\/the array of the struct trienode's starting address.$/;"	m	struct:trie	typeref:struct:trie::trienode
+character	include/Common/TRIE.h	/^		int character[100];$/;"	m	struct:trienode
+clientConnection	lib/Common/Connection.c	/^int clientConnection(int port,char *ip)$/;"	f
+connid	include/Server/ServerCommon.h	/^		int connid;$/;"	m	struct:data
+count	include/Common/TRIE.h	/^		int count;	\/\/count the number of substring rooted through this node.$/;"	m	struct:trienode
+data	include/Server/ServerCommon.h	/^	typedef struct data{$/;"	s
+deleteInTrie	lib/Common/TRIE.c	/^void deleteInTrie(TRIE *trie,char *string)$/;"	f
+deleteNode	lib/Common/ContAllocat.c	/^int deleteNode(void *array, int index){$/;"	f
+dropBox	include/Server/ServerCommon.h	/^		DROPBOX *dropBox;$/;"	m	struct:data
+dropBox	include/Server/ServerCommon.h	/^	typedef struct dropBox{$/;"	s
+dropBoxArrSize	include/Server/ServerCommon.h	/^	int dropBoxArrSize;		\/\/size of glbDropBox array.	$/;"	v
+dropBoxDir	Driver/dropBoxServer.c	/^char dropBoxDir[1024];$/;"	v
+dropBoxId	include/Common/CommandHeader.h	/^	int dropBoxId;		\/\/drop box id to which it is connecting.$/;"	m	struct:header
+dropBoxId	include/Server/ServerCommon.h	/^		int dropBoxId;		\/\/ Contains the dropBoxId, else -1 if this DropBox is not valid one$/;"	m	struct:dropBox
+flag	include/Common/CommandHeader.h	/^	char flag;	\/\/ LSB -1st bit.- if 1 then it is initialization, if 0 then 	$/;"	m	struct:header
+flag	include/Server/ServerCommon.h	/^		char *flag;		\/\/tell the command associated with this file for the user associated with machineId at the index at userToUpdate.$/;"	m	struct:perFileStruct
+getDropBox	lib/Server/ServerConnectToDropBox.c	/^DROPBOX *getDropBox(int dropBoxId){$/;"	f
+getNewDropBoxID	lib/Server/ServerHandleNewUser.c	/^int getNewDropBoxID(){$/;"	f
+getNewNode	lib/Common/ContAllocat.c	/^void *getNewNode(void *array,int *index){	$/;"	f
+getNewUserOfDropBox	lib/Server/ServerHandleNewUser.c	/^int getNewUserOfDropBox(int DropBoxId){$/;"	f
+getTrie	lib/Common/TRIE.c	/^TRIE* getTrie()$/;"	f
+glbDropBox	include/Server/ServerCommon.h	/^	DROPBOX *glbDropBox;	\/\/array contains all the dropBox structure.$/;"	v
+header	include/Common/CommandHeader.h	/^typedef struct header{$/;"	s
+insertInTrie	lib/Common/TRIE.c	/^void insertInTrie(TRIE *trie, char *string, void *value)$/;"	f
+install	lib/Client/InstallNewUser.c	/^int install(int flag, int dropBox, int port ,char *ip){$/;"	f
+isCreated	include/Server/ServerCommon.h	43;"	d
+isData	include/Common/CommandHeader.h	29;"	d
+isDeleted	include/Server/ServerCommon.h	42;"	d
+isDirectory	include/Server/ServerCommon.h	/^		int isDirectory;	\/\/ 0 it is directory, 1 for file.$/;"	m	struct:perFileStruct
+isDirectoryCreated	include/Common/CommandHeader.h	38;"	d
+isDirectoryDeleted	include/Common/CommandHeader.h	39;"	d
+isDirectoryEmpty	lib/Client/InstallNewUser.c	/^static int isDirectoryEmpty(char *fileName){$/;"	f	file:
+isDirectoryMoved	include/Common/CommandHeader.h	40;"	d
+isExitCommand	include/Common/CommandHeader.h	32;"	d
+isFileDeleted	include/Common/CommandHeader.h	36;"	d
+isFileModified	include/Common/CommandHeader.h	41;"	d
+isFileMoved	include/Common/CommandHeader.h	37;"	d
+isInitialization	include/Common/CommandHeader.h	28;"	d
+isLastPacket	include/Common/CommandHeader.h	30;"	d
+isModify	include/Server/ServerCommon.h	44;"	d
+isMoved	include/Server/ServerCommon.h	45;"	d
+isNewFileCreated	include/Common/CommandHeader.h	35;"	d
+isNoMoreFile	include/Common/CommandHeader.h	31;"	d
+machineId	include/Common/CommandHeader.h	/^	int machineId;		\/\/machine id of itself.$/;"	m	struct:header
+machineId	include/Server/ServerCommon.h	/^		int machineId;$/;"	m	struct:data
+main	Driver/dropBoxNewUser.c	/^int main(int argc, char **argv){$/;"	f
+main	Driver/dropBoxServer.c	/^int main(int argc, char **argv){$/;"	f
+main	Driver/dropBoxUser.c	/^int main(int argc, char **argv){$/;"	f
+moved	include/Server/ServerCommon.h	/^		char *moved;		\/\/name of the location form which the file moved here.$/;"	m	struct:perFileStruct
+name	include/Server/ServerCommon.h	/^		char *name;$/;"	m	struct:perFileStruct
+newAllocator	lib/Common/ContAllocat.c	/^void *newAllocator(int nodeSize){$/;"	f
+perFileStruct	include/Server/ServerCommon.h	/^	typedef struct perFileStruct{$/;"	s
+printDetails	lib/Client/HandleGeneratedEvent.c	/^void printDetails(struct inotify_event *inotifyBuf){$/;"	f
+receiveFile	lib/Common/FileTransfer.c	/^int receiveFile(int connid, char *fileName){$/;"	f
+receiveServerDirectoryCreate	lib/Client/HandleFileChange.c	/^void receiveServerDirectoryCreate(int connid, char *dirPath, char *rootDirectory){$/;"	f
+receiveServerDirectoryRemoved	lib/Client/HandleFileChange.c	/^void receiveServerDirectoryRemoved(int connid, char *dirPath, char *rootDirectory){$/;"	f
+receiveServerFileDeletion	lib/Client/HandleFileChange.c	/^void receiveServerFileDeletion(int connid, char *fileName, char *rootDirectory){	\/\/file is deleted.$/;"	f
+receiveServerFileModify	lib/Client/HandleFileChange.c	/^void receiveServerFileModify(int connid, char *fileName, char *rootDirectory){$/;"	f
+receiveServerNewFileCreation	lib/Client/HandleFileChange.c	/^void receiveServerNewFileCreation(int connid, char *fileName, char *rootDirectory){ 	\/\/new file is created.$/;"	f
+receiveUserDirectoryCreate	lib/Server/ServerHandleFileChange.c	/^void receiveUserDirectoryCreate(int connid, char *dirPath, DROPBOX *dropBox, int userId){$/;"	f
+receiveUserDirectoryRemoved	lib/Server/ServerHandleFileChange.c	/^void receiveUserDirectoryRemoved(int connid, char *dirPath, DROPBOX *dropBox, int userId){$/;"	f
+receiveUserFileDeletion	lib/Server/ServerHandleFileChange.c	/^void receiveUserFileDeletion(int connid, char *fileName, DROPBOX *dropBox, int userId){	\/\/file is deleted.$/;"	f
+receiveUserFileModify	lib/Server/ServerHandleFileChange.c	/^void receiveUserFileModify(int connid, char *fileName, DROPBOX *dropBox, int userId){$/;"	f
+receiveUserNewFileCreation	lib/Server/ServerHandleFileChange.c	/^void receiveUserNewFileCreation(int connid, char *fileName, DROPBOX *dropBox, int userId){ 	\/\/new file is created.$/;"	f
+removeWatchOnDirectory	lib/Client/RegisterNotifier.c	/^ int removeWatchOnDirectory(int fdNotify, char *name, char *rootDirectory){$/;"	f
+resetData	include/Common/CommandHeader.h	62;"	d
+resetDirectoryCreated	include/Common/CommandHeader.h	70;"	d
+resetDirectoryDeleted	include/Common/CommandHeader.h	71;"	d
+resetDirectoryMoved	include/Common/CommandHeader.h	72;"	d
+resetExitCommand	include/Common/CommandHeader.h	65;"	d
+resetFileDeleted	include/Common/CommandHeader.h	68;"	d
+resetFileModified	include/Common/CommandHeader.h	73;"	d
+resetFileMoved	include/Common/CommandHeader.h	69;"	d
+resetInitialization	include/Common/CommandHeader.h	61;"	d
+resetLastPacket	include/Common/CommandHeader.h	63;"	d
+resetNewFileCreated	include/Common/CommandHeader.h	67;"	d
+resetNoMoreFile	include/Common/CommandHeader.h	64;"	d
+root	include/Common/TRIE.h	/^		int root;$/;"	m	struct:trie
+searchInTrie	lib/Common/TRIE.c	/^void* searchInTrie(TRIE *trie,char *string)$/;"	f
+sendFile	lib/Common/FileTransfer.c	/^int sendFile(int connid, char *fileName){$/;"	f
+sendServerCommand	lib/Client/HandleFileChange.c	/^static void sendServerCommand(HEADER *header, int connid, char *Name, int size){$/;"	f	file:
+sendServerDirectoryCreate	lib/Client/HandleFileChange.c	/^void sendServerDirectoryCreate(HEADER *header,int connid, char *dirPath){$/;"	f
+sendServerDirectoryRemoved	lib/Client/HandleFileChange.c	/^void sendServerDirectoryRemoved(HEADER *header, int connid, char *dirPath){$/;"	f
+sendServerFileDeletion	lib/Client/HandleFileChange.c	/^void sendServerFileDeletion(HEADER *header,int connid, char *fileName){	\/\/file is deleted.$/;"	f
+sendServerFileModify	lib/Client/HandleFileChange.c	/^void sendServerFileModify(HEADER *header,int connid, char *fileName, char *rootDirectory ){$/;"	f
+sendServerNewFileCreation	lib/Client/HandleFileChange.c	/^void sendServerNewFileCreation(HEADER *header, int connid, char *fileName, char *rootDirectory){ 	\/\/new file is created.$/;"	f
+sendUserCommand	lib/Server/ServerHandleFileChange.c	/^static void sendUserCommand(HEADER *header, int connid, char *Name, int size){$/;"	f	file:
+sendUserDirectoryCreate	lib/Server/ServerHandleFileChange.c	/^void sendUserDirectoryCreate(HEADER *header,int connid, char *dirPath, DROPBOX *dropBox, int userId){$/;"	f
+sendUserDirectoryRemoved	lib/Server/ServerHandleFileChange.c	/^void sendUserDirectoryRemoved(HEADER *header, int connid, char *dirPath, DROPBOX *dropBox, int userId){$/;"	f
+sendUserFileDeletion	lib/Server/ServerHandleFileChange.c	/^void sendUserFileDeletion(HEADER *header,int connid, char *fileName, DROPBOX *dropBox, int userId){	\/\/file is deleted.$/;"	f
+sendUserFileModify	lib/Server/ServerHandleFileChange.c	/^void sendUserFileModify(HEADER *header,int connid, char *fileName, DROPBOX *dropBox, int userId){$/;"	f
+sendUserNewFileCreation	lib/Server/ServerHandleFileChange.c	/^void sendUserNewFileCreation(HEADER *header, int connid, char *fileName, DROPBOX *dropBox, int userId){ 	\/\/new file is created.$/;"	f
+serverConnectToDropBox	lib/Server/ServerConnectToDropBox.c	/^void serverConnectToDropBox(int connid){$/;"	f
+serverConnection	lib/Common/Connection.c	/^int serverConnection(int port, void (*funForEachClient)(int )){$/;"	f
+setData	include/Common/CommandHeader.h	44;"	d
+setDirectoryCreated	include/Common/CommandHeader.h	55;"	d
+setDirectoryDeleted	include/Common/CommandHeader.h	56;"	d
+setDirectoryMoved	include/Common/CommandHeader.h	57;"	d
+setExitCommand	include/Common/CommandHeader.h	47;"	d
+setFileDeleted	include/Common/CommandHeader.h	53;"	d
+setFileModified	include/Common/CommandHeader.h	58;"	d
+setFileMoved	include/Common/CommandHeader.h	54;"	d
+setInitialization	include/Common/CommandHeader.h	43;"	d
+setLastPacket	include/Common/CommandHeader.h	45;"	d
+setNewFileCreated	include/Common/CommandHeader.h	52;"	d
+setNoMoreFile	include/Common/CommandHeader.h	46;"	d
+size	include/Common/CommandHeader.h	/^	short int size; \/\/if command then show the size of file name \/\/if data packet it will show the size of the data send.$/;"	m	struct:header
+startListeningEventAtClient	lib/Server/ServerConnectToDropBox.c	/^void startListeningEventAtClient(HEADER *header, int connid, DROPBOX *dropBox, int machineId){$/;"	f
+trie	include/Common/TRIE.h	/^	typedef struct trie{$/;"	s
+trie	include/Server/ServerCommon.h	/^		TRIE *trie;$/;"	m	struct:dropBox
+trienode	include/Common/TRIE.h	/^	typedef struct trienode{$/;"	s
+updateClientDropBox	lib/Client/ClientConnectToDropBox.c	/^void updateClientDropBox(HEADER* header, int connid, char *rootDirectory){$/;"	f
+updateClientFiles	lib/Server/ServerConnectToDropBox.c	/^void updateClientFiles(HEADER *header, int connid, DROPBOX* dropBox, int machineId){$/;"	f
+userArrSize	include/Server/ServerCommon.h	/^		int userArrSize;$/;"	m	struct:dropBox
+userId	include/Server/ServerCommon.h	/^		int *userId;	\/\/This list contain -1 at any index, if that userId is empty.$/;"	m	struct:dropBox
+value	include/Common/TRIE.h	/^		void *value;		\/\/pointer to the value store corresponding to this string(key).$/;"	m	struct:trienode
+visit	lib/Common/TRIE.c	/^static void visit(TRIENODE *node,int index, void (*func)(void *data,void *user), void *userData){$/;"	f	file:
+wdControlMapping	lib/Client/RegisterNotifier.c	/^char *wdControlMapping[ MAX_FOLDER_ON_SYSTEM ];$/;"	v
